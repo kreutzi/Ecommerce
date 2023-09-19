@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/nav/Navbar";
+import Footer from "./components/Foot/Footer";
 function App() {
   return (
     <div className="App">
@@ -196,7 +197,9 @@ function App() {
       </div>
 
       {/* Footer section */}
-      <footer>{/* Place the footer content here */}</footer>
+      <footer>
+        <Footer/>
+        </footer>
     </div>
   );
 }
