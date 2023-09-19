@@ -1,0 +1,22 @@
+.footer-up {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 0 20px;
+  column-gap: 300px;
+}
+.footer-up-contanet {
+  width: 33%;
+  align-items: center;
+  text-align: center;
+}
+.footer-up-contanet ul {
+  list-style: none;
+}
+.footer-up-contanet ul li a {
+  text-decoration: none;
+  color: black;
+}
+.footer-up-contanet h1 {
+  margin: auto;
+}
