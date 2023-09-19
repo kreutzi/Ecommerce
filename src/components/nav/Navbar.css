@@ -52,7 +52,7 @@
 }
 
 .navbar .nav-links ul li a:hover {
-  color: #ff9800;
+  color: #007aff;
   text-decoration: underline;
 }
 
@@ -71,6 +71,6 @@
   margin-left: 20px;
 }
 .navbar .nav-icons ul li a :hover {
-  color: #ff9800;
+  color: #007aff;
   transition: all 0.3s ease;
 }
