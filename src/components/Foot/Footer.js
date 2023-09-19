@@ -73,7 +73,7 @@ function Footer() {
       </div>
       <div className="footer-down">
         <div className="footer-down-contanet"></div>
-        <div class="footer-down-contanet-social">
+        <div className="footer-down-contanet-social">
           <a href="#">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
