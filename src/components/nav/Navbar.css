@@ -4,13 +4,10 @@
   justify-content: center;
   width: fit-content;
   margin: auto;
-  margin-top: 10px;
   padding: 0 20px;
   height: 70px;
   column-gap: 300px;
 
-  position: sticky;
-  top: 0;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   background-color: white;
   border-radius: 10px;
