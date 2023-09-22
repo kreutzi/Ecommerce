@@ -8,12 +8,10 @@
   float: left;
   border: 0 !important;
   margin: 0px;
-  padding: 10px 20px;
 }
 
 .navbar a {
   display: block;
-  padding: 5px;
   text-decoration: none;
   color: black;
   font-weight: bold;
