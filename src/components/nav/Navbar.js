@@ -4,6 +4,7 @@ import {
   faShoppingCart,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -17,7 +18,7 @@ function Navbar() {
         <div class="col">
           <ul class="list-group list-group-horizontal d-flex justify-content-center">
             <li class="list-group-item">
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li class="list-group-item">
               <a href="#">Shop</a>
@@ -26,7 +27,7 @@ function Navbar() {
               <a href="#">Contact</a>
             </li>
             <li class="list-group-item">
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>
