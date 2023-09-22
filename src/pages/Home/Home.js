@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
+
 function Home() {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
 
@@ -24,11 +25,9 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <div className="main-navbar w-100">
-        <Navbar />
-      </div>
-      <div className="row separate"></div>
+    <div className="Home">
+      <div className="main-navbar w-100"></div>
+      <div className="row seperate"></div>
 
       <div className="main-carousel row top-buffer carousel-bg">
         <div className="main-carousel-content col my-5">
@@ -67,7 +66,7 @@ function Home() {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

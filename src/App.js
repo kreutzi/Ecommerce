@@ -6,16 +6,19 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 function App() {
   return (
-    <div className="App">
-      <div className="container-fluid">
-        <Router>
+    <Router>
+      <div className="App">
+        <div className="container-fluid">
+          <div className="main-navbar w-100">
+            <Navbar />
+          </div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
-        </Router>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

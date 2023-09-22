@@ -1,0 +1,42 @@
+:root {
+  --Blue: #3577f0;
+  --Purple: #8c71db;
+}
+.About .seperate {
+  padding-bottom: 100px;
+  /* padding: 0;
+  margin: 0; */
+  background: #f8f8f8;
+}
+.header {
+  background: #f8f8f8;
+  padding: 10px 15%;
+}
+.page ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.page ul li {
+  list-style: none;
+  margin: 0 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.page ul li a {
+  text-decoration: none;
+  color: #999;
+}
+.page ul li a:hover {
+  color: var(--Blue);
+}
+.active {
+  color: var(--Blue);
+  cursor: pointer;
+}
+.header h1 {
+  margin-left: 40px;
+  font-weight: 700;
+}
+img {
+  width: 100%;
+}
