@@ -16,33 +16,33 @@ function Navbar() {
         </div>
         <div class="col">
           <ul class="list-group list-group-horizontal d-flex justify-content-center">
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">Home</a>
             </li>
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">Shop</a>
             </li>
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">Contact</a>
             </li>
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">About</a>
             </li>
           </ul>
         </div>
         <div class="col col-lg-2">
           <ul class="list-group list-group-horizontal d-flex justify-content-center">
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">
                 <FontAwesomeIcon icon={faSearch} />
               </a>
             </li>
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">
                 <FontAwesomeIcon icon={faShoppingCart} />
               </a>
             </li>
-            <li class="col-xs-3 list-group-item">
+            <li class="list-group-item">
               <a href="#">
                 <FontAwesomeIcon icon={faUser} />
               </a>

@@ -10,10 +10,10 @@ function carousel() {
         scrollbar="true"
       >
         <swiper-slide>
-          <img src={img1} alt="product" />
+          <img src={img1} className="img-fluid" alt="product" />
         </swiper-slide>
         <swiper-slide>
-          <img src={img2} alt="product" />
+          <img src={img2} className="img-fluid" alt="product" />
         </swiper-slide>
         ...
       </swiper-container>
