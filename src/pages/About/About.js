@@ -1,5 +1,12 @@
-function About() {
-  return <div>About</div>;
-}
+import Navbar from "../../components/nav/Navbar";
 
-export default About;
+export default function About() {
+  return (
+    <>
+      <div className="main-navbar w-100">
+        <Navbar />
+        <div className="row separate"></div>
+      </div>
+    </>
+  );
+}

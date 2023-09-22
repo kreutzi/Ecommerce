@@ -1,0 +1,27 @@
+.main-navbar {
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999999999;
+}
+.top-buffer {
+  padding-top: 120px;
+}
+
+.carousel-bg {
+  background-color: #f9f3f0;
+}
+.separate {
+  background-color: #f9f3f0;
+  padding-bottom: 100px;
+}
+
+.content-browse {
+  padding-left: 17vw;
+}
+
+.content-items {
+  padding-left: 17vw;
+}
