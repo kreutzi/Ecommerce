@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/Foot/Footer";
 import Carousel from "./components/carousel/carousel";
@@ -40,19 +41,22 @@ function App() {
       <header>{/* Place the header content here */}</header>
 
       {/* Main section */}
-      <div className="main">
-        <div className="main-navbar">
+      <div className="container-fluid">
+        <div className="main-navbar w-100">
           <Navbar />
         </div>
+        <div className="row test"></div>
 
-        <div className="main-carousel">
-          <div className="main-carousel-content">
-            <span>
+        <div className="main-carousel row top-buffer carousel-bg">
+          <div className="main-carousel-content col my-5">
+            <span className="col">
               <h1>{itemheader[activeIndex]}</h1>
               <p>this is a test</p>
             </span>
           </div>
-          <Carousel />
+          <div className="col">
+            <Carousel />
+          </div>
         </div>
         <div className="content">
           <div className="content-browse">
@@ -74,12 +78,11 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Footer section */}
-      <div className="main-footer">
-        <div className="main-footer-content">
-          <Footer />
+        {/* Footer section */}
+        <div className="main-footer">
+          <div className="main-footer-content">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

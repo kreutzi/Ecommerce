@@ -9,44 +9,46 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <div className="navbar">
-      <div className="nav-logo">
-        <h1>Logo</h1>
-      </div>
-      <div className="nav-links">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-      </div>
-      <div className="nav-icons">
-        <ul>
-          <li>
-            <a href="#">
-              <FontAwesomeIcon icon={faSearch} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <FontAwesomeIcon icon={faShoppingCart} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <FontAwesomeIcon icon={faUser} />
-            </a>
-          </li>
-        </ul>
+    <div class="container text-center bg-white rounded-4 py-2 fs-5">
+      <div class="navbar row justify-content-md-center">
+        <div class="col col-lg-2">
+          <h1>Logo</h1>
+        </div>
+        <div class="col">
+          <ul class="list-group list-group-horizontal d-flex justify-content-center">
+            <li class="col-xs-3 list-group-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="col-xs-3 list-group-item">
+              <a href="#">Shop</a>
+            </li>
+            <li class="col-xs-3 list-group-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="col-xs-3 list-group-item">
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-lg-2">
+          <ul class="list-group list-group-horizontal d-flex justify-content-center">
+            <li class="col-xs-3 list-group-item">
+              <a href="#">
+                <FontAwesomeIcon icon={faSearch} />
+              </a>
+            </li>
+            <li class="col-xs-3 list-group-item">
+              <a href="#">
+                <FontAwesomeIcon icon={faShoppingCart} />
+              </a>
+            </li>
+            <li class="col-xs-3 list-group-item">
+              <a href="#">
+                <FontAwesomeIcon icon={faUser} />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
