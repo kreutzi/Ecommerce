@@ -1,67 +1,27 @@
-.App {
-  padding: 0;
-  margin: 0;
-  background-color: #f9f3f0;
-}
-
 .main-navbar {
   padding-top: 10px;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 99999999999999999999999999999;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999999999;
+}
+.top-buffer {
+  padding-top: 120px;
 }
 
-.main-carousel {
-  position: relative;
-  width: 100%;
-  text-align: center;
+.carousel-bg {
+  background-color: #f9f3f0;
 }
-.main-carousel-content {
-  overflow: hidden;
-  z-index: 1000;
-  position: absolute;
-  top: 200px;
-  right: 600px;
-  width: 100%;
-  pointer-events: none;
-  animation: 1000ms ease-in-out 0s normal none 1;
-}
-
-.main-carousel-content span {
-  display: block;
-  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-}
-@keyframes reveal {
-  0% {
-    transform: translate(0, 100%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.content {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.test {
+  background-color: #f9f3f0;
+  padding-bottom: 100px;
 }
 
 .content-browse {
-  margin-right: 900px;
-}
-.content-items {
-  margin-right: 900px;
+  padding-left: 17vw;
 }
 
-.main-footer {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.main-footer-content {
-  margin-right: 50px;
+.content-items {
+  padding-left: 17vw;
 }
