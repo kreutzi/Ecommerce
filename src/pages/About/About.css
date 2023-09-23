@@ -1,3 +1,7 @@
+::selection {
+  background: var(--Purple);
+  color: #fff;
+}
 :root {
   --Blue: #3577f0;
   --Purple: #8c71db;
