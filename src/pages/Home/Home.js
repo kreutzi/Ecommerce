@@ -1,5 +1,4 @@
 import Navbar from "../../components/nav/Navbar";
-import Footer from "../../components/Foot/Footer";
 import Carousel from "../../components/carousel/carousel";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -61,11 +60,6 @@ function Home() {
         </div>
       </div>
       {/* Footer section */}
-      <div className="main-footer">
-        <div className="main-footer-content">
-          <Footer />
-        </div>
-      </div>
     </div>
   );
 }
