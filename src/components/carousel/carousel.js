@@ -5,9 +5,9 @@ function carousel() {
     <div className="container">
       <swiper-container
         className="col"
-        navigation="true"
+        navigation="false"
         pagination="true"
-        scrollbar="true"
+        scrollbar="false"
       >
         <swiper-slide>
           <img src={img1} className="img-fluid" alt="product" />

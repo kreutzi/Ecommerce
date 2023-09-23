@@ -36,5 +36,24 @@
 }
 
 .main-carousel-content {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.main-carousel-content .link {
+  text-decoration: none;
+}
+
+.main-carousel-content button {
+  background: white;
+  width: 25%;
+  padding: 15px 30px;
+  border: 2px solid #e0dede;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.1s ease;
+}
+.main-carousel-content button:hover {
+  background: var(--Blue);
+  color: #fff;
+  border: 2px solid var(--Blue);
 }

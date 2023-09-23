@@ -5,6 +5,7 @@ import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 import "./home.css";
+import { Link } from "react-router-dom";
 
 function Home({ routeVariants }) {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
@@ -31,17 +32,22 @@ function Home({ routeVariants }) {
       animate="final"
       className="home"
     >
-      <div className="main-navbar w-100"></div>
-      <div className="row seperate"></div>
       <div className="main-carousel row top-buffer carousel-bg">
-        <div className="main-carousel-content col my-5" key={activeIndex}>
-          <span className="col">
-            <h1>{itemheader[activeIndex]}</h1>
-            <p>this is a test</p>
-          </span>
-        </div>
-        <div className="col">
-          <Carousel />
+        <div className="d-flex align-items-center">
+          <div className="main-carousel-content col my-5" key={activeIndex}>
+            <span className="col text-center">
+              <h1>{itemheader[activeIndex]}</h1>
+              <Link
+                className="link d-flex justify-content-center"
+                to="/contact"
+              >
+                <button>Shop Now</button>
+              </Link>
+            </span>
+          </div>
+          <div className="col-md-6 ms-auto">
+            <Carousel />
+          </div>
         </div>
       </div>
       <div className="content">
