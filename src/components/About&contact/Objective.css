@@ -1,0 +1,39 @@
+.objective {
+  position: relative;
+}
+.objective ul {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 12% 10px 16%;
+  justify-content: space-between;
+}
+.objective ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.objective-txt {
+  padding-left: 14px;
+}
+.objective ul li p {
+  color: var(--Grey-dark);
+}
+.objective-img img {
+  width: 100%;
+}
+.objective-img {
+  width: 15%;
+  margin-bottom: 15px;
+}
+.objective::after {
+  background: #f6f7fb;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 60px;
+  content: "";
+  width: 1250px;
+  margin: 0 auto;
+}

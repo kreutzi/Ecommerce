@@ -24,7 +24,7 @@ function Navbar() {
               <a href="#">Shop</a>
             </li>
             <li class="list-group-item">
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li class="list-group-item">
               <Link to="/about">About</Link>

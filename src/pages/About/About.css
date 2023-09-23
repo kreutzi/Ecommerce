@@ -1,42 +1,233 @@
 :root {
   --Blue: #3577f0;
   --Purple: #8c71db;
+  --Grey-light: #999;
+  --Grey-dark: #777777;
 }
-.About .seperate {
-  padding-bottom: 100px;
-  /* padding: 0;
-  margin: 0; */
+
+.about .seperate {
+  padding-bottom: 80px;
   background: #f8f8f8;
 }
-.header {
+.about .header {
   background: #f8f8f8;
-  padding: 10px 15%;
+  padding: 10px 11%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.page ul {
+.about .page ul {
   display: flex;
   flex-flow: row wrap;
 }
-.page ul li {
+.about .page ul li {
   list-style: none;
   margin: 0 5px;
   font-weight: 500;
   font-size: 16px;
 }
-.page ul li a {
+.about .page ul li a {
   text-decoration: none;
-  color: #999;
+  color: var(--Grey-light);
 }
-.page ul li a:hover {
+.about .page ul li a:hover {
   color: var(--Blue);
 }
-.active {
+.about .active {
   color: var(--Blue);
   cursor: pointer;
 }
-.header h1 {
-  margin-left: 40px;
+.about .header h1 {
+  margin-left: 35px;
   font-weight: 700;
+  width: max-content;
 }
-img {
+.about .headerImg img {
   width: 100%;
+}
+.about .headerImg {
+  width: 15%;
+}
+
+.about .shopping {
+  display: flex;
+  padding: 40px 100px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about .shopping-txt {
+  width: 50%;
+}
+.about .shopping-txt h4 {
+  color: var(--Blue);
+  font-size: 15px;
+  font-weight: 600;
+}
+.about .shopping-txt p {
+  color: var(--Grey-dark);
+  width: 100%;
+  font-size: 20px;
+  margin: 25px 0;
+}
+.about .shopping-txt ul {
+  display: flex;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+}
+.about .shopping-txt ul li {
+  width: 80%;
+  padding-right: 20px;
+  list-style: none;
+  color: var(--Grey-dark);
+  font-size: 14px;
+}
+.about .shopping-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.about .shopping-img {
+  width: 25%;
+}
+
+.about .card {
+  border: none;
+}
+.about .card_pos {
+  position: absolute;
+  bottom: -125px;
+  display: flex;
+  background: transparent;
+  position: relative;
+  flex-direction: row;
+  padding: 0px 12%;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+}
+
+.about .cards {
+  background: #fff;
+  width: 28%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px;
+  border: 1.5px solid transparent;
+  transition: 0.3s ease;
+  box-shadow: 1px 3px 15px -8px var(--Grey-light);
+}
+.about .cards img {
+  width: 15%;
+}
+.about .cards h5 {
+  padding-top: 20px;
+}
+.about .cards:hover {
+  border: 1.5px solid var(--Blue);
+  border-radius: 5px;
+}
+.about .cards p {
+  color: var(--Grey-dark);
+  width: 90%;
+  padding-top: 10px;
+}
+
+.about .team {
+  padding: 11% 13% 5%;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+}
+.about .team h6 {
+  color: var(--Purple);
+  padding-bottom: 6px;
+}
+
+.about .feature {
+  display: flex;
+  flex-direction: column;
+  padding: 4% 13%;
+}
+.about .features {
+  display: flex;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+.about .features-txt {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.about .features-txt h6 {
+  color: var(--Grey-dark);
+  font-weight: 400;
+}
+.about .features-txt h1 {
+  font-weight: 700;
+  font-size: 34px;
+  padding-bottom: 10px;
+}
+.about .features-txt p {
+  color: var(--Grey-dark);
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+.about .features-txt button {
+  width: 25%;
+  padding: 15px 30px;
+  border: 2px solid #e0dede;
+  font-weight: 600;
+  border-radius: 5px;
+  background: transparent;
+  transition: 0.3s ease;
+}
+.about .features-txt button:hover {
+  background: var(--Blue);
+  color: #fff;
+  border: 2px solid var(--Blue);
+}
+.about .features-img {
+  width: 40%;
+}
+.about .features-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* --------------------------------- */
+.about .email {
+  background-image: url(/src/Assets/Images/email.png);
+  height: 400px;
+  margin: 0px 13% 35px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.about .email h6 {
+  color: var(--Blue);
+  padding-bottom: 5px;
+}
+.about .emails input {
+  width: 30%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 40px 25px 0 0;
+}
+.about .emails button {
+  width: 12%;
+  padding: 15px 30px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  background: transparent;
+  background: #55b9f6;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.about .emails button:hover {
+  transform: scale(1.1);
+}
+.about .emails input :enabled {
+  border: none;
 }
