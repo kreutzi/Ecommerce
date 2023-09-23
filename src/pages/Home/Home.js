@@ -1,11 +1,12 @@
-import Navbar from "../../components/nav/Navbar";
 import Carousel from "../../components/carousel/carousel";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
-import "./Home.css";
+import { motion } from "framer-motion";
 
-function Home() {
+import "./home.css";
+
+function Home({ routeVariants }) {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,12 +25,16 @@ function Home() {
   }, []);
 
   return (
-    <div className="Home">
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      className="home"
+    >
       <div className="main-navbar w-100"></div>
       <div className="row seperate"></div>
-
       <div className="main-carousel row top-buffer carousel-bg">
-        <div className="main-carousel-content col my-5">
+        <div className="main-carousel-content col my-5" key={activeIndex}>
           <span className="col">
             <h1>{itemheader[activeIndex]}</h1>
             <p>this is a test</p>
@@ -59,8 +64,7 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* Footer section */}
-    </div>
+    </motion.div>
   );
 }
 

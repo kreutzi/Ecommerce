@@ -7,12 +7,13 @@ import cards3 from "../../Assets/Images/cards_logo3.png";
 import feature1 from "../../Assets/Images/features1.jpg";
 import feature3 from "../../Assets/Images/features3.jpg";
 import Objective from "../../components/About&contact/Objective";
+import { motion } from "framer-motion";
 
 // import { useState } from "react";
 // import Carousel from "react-bootstrap/Carousel";
 // import ExampleCarouselImage from "components/ExampleCarouselImage";
 
-function About() {
+function About({ routeVariants, childVariants }) {
   // const [index, setIndex] = useState(0);
 
   // const handleSelect = (selectedIndex) => {
@@ -20,9 +21,13 @@ function About() {
   // };
 
   return (
-    <div className="about">
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      className="about"
+    >
       <div className="row seperate"></div>
-
       <div className="header">
         <div className="header-txt">
           <div className="page">
@@ -55,22 +60,28 @@ function About() {
         </div>
         <div className="shopping-txt">
           <h4>About Store</h4>
-          <h2>Online shopping includes both buying things online.</h2>
-          <p>
-            Salesforce B2C Commerce can help you create unified, intelligent
-            digital commerce experiences — both online and in the store.
-          </p>
-          <ul>
-            <li>
-              Empower your sales teams with industry tailored solutions that
-              support manufacturers as they go digital, and adapt to changing
-              markets & customers faster by creating new business.
-            </li>
-            <li>
-              Salesforce B2B Commerce offers buyers the seamless, self-service
-              experience of online shopping with all the B2B
-            </li>
-          </ul>
+          <motion.div
+            variants={childVariants}
+            initial="initial"
+            animate="final"
+          >
+            <h2>Online shopping includes both buying things online.</h2>
+            <p>
+              Salesforce B2C Commerce can help you create unified, intelligent
+              digital commerce experiences — both online and in the store.
+            </p>
+            <ul>
+              <li>
+                Empower your sales teams with industry tailored solutions that
+                support manufacturers as they go digital, and adapt to changing
+                markets & customers faster by creating new business.
+              </li>
+              <li>
+                Salesforce B2B Commerce offers buyers the seamless, self-service
+                experience of online shopping with all the B2B
+              </li>
+            </ul>
+          </motion.div>
         </div>
       </div>
       <div className="card">
@@ -179,7 +190,7 @@ function About() {
         </div>
       </div>
       <Objective />
-    </div>
+    </motion.div>
   );
 }
 

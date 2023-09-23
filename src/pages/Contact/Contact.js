@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Contact.css";
+import { motion } from "framer-motion";
 
-function Contact() {
+function Contact({ routeVariants, childVariants }) {
   return (
-    <div className="contact">
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      className="contact"
+    >
+      {" "}
       <div className="row seperate"></div>
-
       <div className="header">
         <div className="header-txt">
           <div className="page">
@@ -33,22 +39,24 @@ function Contact() {
         </div>
       </div>
       <div className="container">
-        <div className="form">
-          <form action="">
-            <h1>We would love to hear from you.</h1>
-            <p>
-              If you’ve got great products your making or looking to work with
-              us then drop us a line.
-            </p>
+        <motion.div variants={childVariants} initial="initial" animate="final">
+          <div className="form">
+            <form action="">
+              <h1>We would love to hear from you.</h1>
+              <p>
+                If you’ve got great products your making or looking to work with
+                us then drop us a line.
+              </p>
 
-            <input type="text" />
-            <input type="number" name="Phone" id="" />
-            <input type="email" name="email" id="" />
-          </form>
-        </div>
+              <input type="text" />
+              <input type="number" name="Phone" id="" />
+              <input type="email" name="email" id="" />
+            </form>
+          </div>
+        </motion.div>
         <div className="info"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

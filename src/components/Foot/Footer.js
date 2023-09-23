@@ -12,10 +12,10 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div class="container text-center bg-white">
+    <div className="container text-center bg-white">
       <div className="footer d-grid gap-4">
         <div className="row">
-          <div class="col">
+          <div className="col">
             <ul className="list-group">
               <li className="list-group-item">
                 <h3>Support</h3>
