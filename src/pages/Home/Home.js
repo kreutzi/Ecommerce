@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-
+import Card from "../../components/card/card";
 import "./home.css";
 import { Link } from "react-router-dom";
 
@@ -32,9 +32,10 @@ function Home({ routeVariants }) {
       animate="final"
       className="home"
     >
+      <div className="seperate"></div>
       <div className="main-carousel row top-buffer carousel-bg">
-        <div className="d-flex align-items-center">
-          <div className="main-carousel-content col my-5" key={activeIndex}>
+        <div className="row">
+          <div className="main-carousel-content col my-auto" key={activeIndex}>
             <span className="col text-center">
               <h1>{itemheader[activeIndex]}</h1>
               <Link
@@ -50,12 +51,13 @@ function Home({ routeVariants }) {
           </div>
         </div>
       </div>
-      <div className="content">
-        <div className="content-browse">
+      <div className="content row">
+        <div className="content-browse col">
           <h1 className="content-browse-title">
             <FontAwesomeIcon icon={faTags} color="#ff497c" /> Browse By
             Categories
           </h1>
+
           <div className="content-browse-categories">
             <h1>Cards</h1>
           </div>
@@ -65,8 +67,23 @@ function Home({ routeVariants }) {
             <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" /> Browse
             By Categories
           </h1>
-          <div className="content-items-explore">
-            <h1>Cards</h1>
+          <div className="content-items-explore row justify-content-start ">
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
+          </div>
+          <div className="content-items-explore row justify-content-start ">
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
+          </div>
+          <div className="content-items-explore row justify-content-start ">
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
+            <Card className="col-3" />
           </div>
         </div>
       </div>

@@ -11,19 +11,34 @@
 }
 
 .carousel-bg {
-  background-color: #f9f3f0;
+  background: rgb(210, 207, 198);
+  background: linear-gradient(
+    0deg,
+    rgba(210, 207, 198, 1) 0%,
+    rgba(249, 243, 240, 1) 8%
+  );
 }
 .home .seperate {
   background-color: #f9f3f0;
   padding-bottom: 100px;
 }
 
-.content-browse {
+.content-browse-categories {
   padding-left: 17vw;
 }
 
-.content-items {
+.content-browse-title {
   padding-left: 17vw;
+}
+
+.content-browse-categories {
+}
+.content-items-title {
+  padding-left: 17vw;
+}
+.content-items-explore {
+  padding-left: 17vw;
+  padding-right: 17vw;
 }
 
 @keyframes slideInFromLeft {
