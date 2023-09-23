@@ -11,7 +11,6 @@ function Contact({ routeVariants, childVariants }) {
       animate="final"
       className="contact"
     >
-      {" "}
       <div className="row seperate"></div>
       <div className="header">
         <div className="header-txt">
