@@ -1,0 +1,237 @@
+::selection {
+  background: var(--Purple);
+  color: #fff;
+}
+:root {
+  --Blue: #3577f0;
+  --Purple: #8c71db;
+  --Grey-light: #999;
+  --Grey-dark: #777777;
+}
+
+.shop .seperate {
+  padding-bottom: 100px;
+  background: #f8f8f8;
+}
+.shop .header {
+  background: #f8f8f8;
+  padding: 50px 11%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop .page ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.shop .page ul li {
+  list-style: none;
+  margin: 0 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.shop .page ul li a {
+  text-decoration: none;
+  color: var(--Grey-light);
+}
+.shop .page ul li a:hover {
+  color: var(--Blue);
+}
+.shop .active {
+  color: var(--Blue);
+  cursor: pointer;
+}
+.shop .header h1 {
+  margin-left: 35px;
+  font-weight: 700;
+  width: max-content;
+}
+.shop .headerImg img {
+  width: 100%;
+}
+.shop .headerImg {
+  width: 15%;
+}
+
+.shop .shopping {
+  display: flex;
+  padding: 40px 100px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.shop .shopping-txt {
+  width: 50%;
+}
+.shop .shopping-txt h4 {
+  color: var(--Blue);
+  font-size: 15px;
+  font-weight: 600;
+}
+.shop .shopping-txt p {
+  color: var(--Grey-dark);
+  width: 100%;
+  font-size: 20px;
+  margin: 25px 0;
+}
+.shop .shopping-txt ul {
+  display: flex;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+}
+.shop .shopping-txt ul li {
+  width: 80%;
+  padding-right: 20px;
+  list-style: none;
+  color: var(--Grey-dark);
+  font-size: 14px;
+}
+.shop .shopping-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.shop .shopping-img {
+  width: 25%;
+}
+
+.shop .card {
+  border: none;
+}
+.shop .card_pos {
+  position: absolute;
+  bottom: -125px;
+  display: flex;
+  background: transparent;
+  position: relative;
+  flex-direction: row;
+  padding: 0px 12%;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+}
+
+.shop .cards {
+  background: #fff;
+  width: 28%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px;
+  border: 1.5px solid transparent;
+  transition: 0.3s ease;
+  box-shadow: 1px 3px 15px -8px var(--Grey-light);
+}
+.shop .cards img {
+  width: 15%;
+}
+.shop .cards h5 {
+  padding-top: 20px;
+}
+.shop .cards:hover {
+  border: 1.5px solid var(--Blue);
+  border-radius: 5px;
+}
+.shop .cards p {
+  color: var(--Grey-dark);
+  width: 90%;
+  padding-top: 10px;
+}
+
+.shop .team {
+  padding: 11% 13% 5%;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+}
+.shop .team h6 {
+  color: var(--Purple);
+  padding-bottom: 6px;
+}
+
+.shop .feature {
+  display: flex;
+  flex-direction: column;
+  padding: 4% 13%;
+}
+.shop .features {
+  display: flex;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+.shop .features-txt {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.shop .features-txt h6 {
+  color: var(--Grey-dark);
+  font-weight: 400;
+}
+.shop .features-txt h1 {
+  font-weight: 700;
+  font-size: 34px;
+  padding-bottom: 10px;
+}
+.shop .features-txt p {
+  color: var(--Grey-dark);
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+.shop .features-txt button {
+  width: 25%;
+  padding: 15px 30px;
+  border: 2px solid #e0dede;
+  font-weight: 600;
+  border-radius: 5px;
+  background: transparent;
+  transition: 0.3s ease;
+}
+.shop .features-txt button:hover {
+  background: var(--Blue);
+  color: #fff;
+  border: 2px solid var(--Blue);
+}
+.shop .features-img {
+  width: 40%;
+}
+.shop .features-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* --------------------------------- */
+.shop .email {
+  background-image: url(/src/Assets/Images/email.png);
+  height: 400px;
+  margin: 0px 13% 35px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.shop .email h6 {
+  color: var(--Blue);
+  padding-bottom: 5px;
+}
+.shop .emails input {
+  width: 30%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 40px 25px 0 0;
+}
+.shop .emails button {
+  width: 12%;
+  padding: 15px 30px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  background: transparent;
+  background: #55b9f6;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.shop .emails button:hover {
+  transform: scale(1.1);
+}
+.shop .emails input :enabled {
+  border: none;
+}
