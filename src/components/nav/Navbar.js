@@ -21,7 +21,7 @@ function Navbar() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="list-group-item">
-              <a href="#">Shop</a>
+              <a href="/shop">Shop</a>
             </li>
             <li className="list-group-item">
               <NavLink to="/about">About</NavLink>

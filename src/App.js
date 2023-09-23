@@ -8,6 +8,7 @@ import {
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/Foot/Footer";
 import Home from "./pages/Home/Home";
+import Shop from "./pages/shop/shop";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import { useEffect } from "react";
@@ -24,10 +25,10 @@ function ScrollToTop() {
 
 const routeVariants = {
   initial: {
-    x: "100vh",
+    y: "100vh",
   },
   final: {
-    x: "0vh",
+    y: "0vh",
     transition: {
       type: "spring",
       mass: 0.4,
@@ -54,6 +55,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+
       <div className="App">
         <div className="container-fluid">
           <div className="main-navbar w-100">
@@ -61,6 +63,7 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={<Home routeVariants={routeVariants} />} />
+            <Route path="/shop" element={<Shop />} />
             <Route
               path="/about"
               element={
