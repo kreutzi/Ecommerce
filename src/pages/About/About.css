@@ -6,12 +6,12 @@
 }
 
 .about .seperate {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   background: #f8f8f8;
 }
 .about .header {
   background: #f8f8f8;
-  padding: 10px 11%;
+  padding: 50px 11%;
   display: flex;
   justify-content: space-between;
   align-items: center;

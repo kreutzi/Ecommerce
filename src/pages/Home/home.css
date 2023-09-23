@@ -13,7 +13,7 @@
 .carousel-bg {
   background-color: #f9f3f0;
 }
-.Home .seperate {
+.home .seperate {
   background-color: #f9f3f0;
   padding-bottom: 100px;
 }
@@ -24,4 +24,17 @@
 
 .content-items {
   padding-left: 17vw;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main-carousel-content {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
