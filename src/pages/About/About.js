@@ -41,18 +41,7 @@ function About({ routeVariants, childVariants }) {
           </div>
           <h1>About Our Store</h1>
         </div>
-        <div className="headerImg">
-          <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#0b5567"
-              d="M105.506 103.661c18.26 14.599 29.96-28.993.865-37.03-24.416-6.765-48.984 4.833-73.602 31.893 0 0 45.473-16.633 72.737 5.137z"
-            />
-            <path
-              fill="#15a9ce"
-              d="M33.176 98.168c17.498-18.159 46.593-38.403 73.704-30.926 6.307 1.78 10.783 5.442 13.683 9.817l-25.637-51.73c-3.662-5.85-13.021-4.629-18.311-.153L8.862 81.942c-6.155 5.29-6.51 14.7-.814 20.397 5.036 5.036 13.022 5.493 18.566 1.017z"
-            />
-          </svg>
-        </div>
+        <div className="headerImg"></div>
       </div>
       <div className="shopping">
         <div className="shopping-img">
@@ -115,31 +104,6 @@ function About({ routeVariants, childVariants }) {
       <div className="team">
         <h6>Our Team</h6>
         <h2>Expart Management Team</h2>
-        {/* <Carousel activeIndex={index} onSelect={handleSelect}>
-          <Carousel.Item>
-            <ExampleCarouselImage text="First slide" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <ExampleCarouselImage text="Second slide" />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <ExampleCarouselImage text="Third slide" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel> */}
       </div>
       <div className="feature">
         <div className="features">

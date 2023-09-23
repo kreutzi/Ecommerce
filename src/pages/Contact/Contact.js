@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Objective from "../../components/About&contact/Objective";
 import "./Contact.css";
 import { motion } from "framer-motion";
 
@@ -38,24 +39,73 @@ function Contact({ routeVariants, childVariants }) {
           </svg>
         </div>
       </div>
-      <div className="container">
-        <motion.div variants={childVariants} initial="initial" animate="final">
+      <motion.div variants={childVariants} initial="initial" animate="final">
+        <div className="container">
           <div className="form">
-            <form action="">
-              <h1>We would love to hear from you.</h1>
+            <form action="#">
+              <h2>We would love to hear from you.</h2>
               <p>
                 If you’ve got great products your making or looking to work with
                 us then drop us a line.
               </p>
-
-              <input type="text" />
-              <input type="number" name="Phone" id="" />
-              <input type="email" name="email" id="" />
+              <div className="all-inputs">
+                <div className="inputs-order">
+                  <div className="labels">
+                    <input type="text" name="Name" required />
+                    <label htmlFor="Name">
+                      Name<span> *</span>
+                    </label>
+                  </div>
+                  <div className="labels">
+                    <input type="tel" name="Phone" required />
+                    <label htmlFor="phone">
+                      Phone<span> *</span>
+                    </label>
+                  </div>
+                  <div className="labels">
+                    <input type="email" name="email" required />
+                    <label htmlFor="email">
+                      E-mail<span> *</span>
+                    </label>
+                  </div>
+                </div>
+                <div className="labels four">
+                  <input type="text" name="message" />
+                  <label htmlFor="message">Your Message</label>
+                </div>
+                <button type="submit">Send Message</button>
+              </div>
             </form>
           </div>
-        </motion.div>
-        <div className="info"></div>
+          <div className="info">
+            <h3>Our Store</h3>
+            <p>District 1, Sheikh Zayed , Giza ,Egypt</p>
+            <br />
+            <p>Phone: +20 101 322 3173</p>
+            <p>Email: Hello@logo.com</p>
+            <br />
+            <h3>Careers</h3>
+            <p>Instead of buying six things, one that you really like.</p>
+            <br />
+            <h3>Opening Hours:</h3>
+            <p>Saturday to Thursday: 9am - 10pm</p>
+            <p>Fridays: 10am - 6pm</p>
+          </div>
+        </div>
+      </motion.div>
+      <div className="map">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              title="#"
+              src="https://maps.google.com/maps?q=sheikh%20zayed&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
       </div>
+      <Objective />
     </motion.div>
   );
 }

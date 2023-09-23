@@ -24,10 +24,10 @@ function Navbar() {
               <a href="#">Shop</a>
             </li>
             <li className="list-group-item">
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li className="list-group-item">
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>

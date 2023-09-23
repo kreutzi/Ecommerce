@@ -1,3 +1,9 @@
+:root {
+  --Blue: #3577f0;
+  --Purple: #8c71db;
+  --Grey-light: #999;
+  --Grey-dark: #777777;
+}
 .contact .seperate {
   padding-bottom: 80px;
   background: #f8f8f8;
@@ -40,4 +46,104 @@
 }
 .contact .headerImg {
   width: 15%;
+}
+.contact .container {
+  display: flex;
+  /* padding: 3% 0; */
+  margin: 5% 12%;
+}
+.contact .form {
+  width: 70%;
+}
+.contact .form p {
+  color: var(--Grey-dark);
+  margin: 20px 0 40px 0;
+}
+.contact .all-inputs {
+  margin-left: -12px;
+}
+.contact .inputs-order {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.contact .labels {
+  position: relative;
+}
+.contact .labels label {
+  position: absolute;
+  left: 30px;
+  top: -6px;
+  background-color: #fff;
+  padding: 4px 8px;
+  color: var(--Grey-dark);
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact .labels span {
+  color: #f00;
+}
+.contact .labels input {
+  margin: 10px 15px;
+  padding: 12px;
+  width: 102%;
+  border-radius: 6px;
+  border: 1px solid #cecaca;
+}
+.contact .four input {
+  width: 90.6%;
+  height: 150px;
+}
+.contact .all-inputs button {
+  width: 20%;
+  padding: 2% 30px;
+  margin: 15px 0 0 14px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  background: transparent;
+  background: var(--Blue);
+  transition: 0.3s ease;
+}
+.contact .all-inputs button:hover {
+  transform: scale(1.05);
+}
+.contact .info {
+  margin-left: 10px;
+}
+.contact .info p {
+  color: var(--Grey-dark);
+  margin: 0;
+  width: 80%;
+}
+.contact .info h3 {
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.contact .map {
+  padding: 0 15% 5%;
+}
+.contact .map iframe {
+  height: 500px;
+  width: 1300px;
+}
+.contact .mapouter {
+  position: relative;
+  height: 500px;
+  width: 1300px;
+}
+.contact .gmap_canvas {
+  overflow: hidden;
+  height: 500px;
+  width: 1300px;
+}
+.contact .gmap_canvas iframe {
+  position: relative;
+  z-index: 2;
+}
+.contact .gmap_canvas a {
+  top: 0;
+  z-index: 0;
 }
