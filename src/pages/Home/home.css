@@ -23,18 +23,17 @@
   padding-bottom: 100px;
 }
 
-.content-browse-categories {
-  padding-left: 17vw;
-}
-
 .content-browse-title {
+  padding-left: 15vw;
+  padding-bottom: 10px;
+}
+.content-browse-categories {
   padding-left: 17vw;
 }
 
-.content-browse-categories {
-}
 .content-items-title {
-  padding-left: 17vw;
+  padding-left: 15vw;
+  padding-bottom: 10px;
 }
 .content-items-explore {
   padding-left: 17vw;
@@ -56,6 +55,10 @@
 
 .main-carousel-content .link {
   text-decoration: none;
+}
+
+.main-carousel-content h1 {
+  padding-bottom: 15px;
 }
 
 .main-carousel-content button {

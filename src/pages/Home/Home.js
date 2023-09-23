@@ -42,7 +42,9 @@ function Home({ routeVariants }) {
                 className="link d-flex justify-content-center"
                 to="/contact"
               >
-                <button>Shop Now</button>
+                <button>
+                  <h5>Shop Now</h5>
+                </button>
               </Link>
             </span>
           </div>

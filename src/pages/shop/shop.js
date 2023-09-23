@@ -1,5 +1,9 @@
+import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "../shop/shop.css";
+import Card from "../../components/card/card";
 function shop() {
   return (
     <div className="shops">
@@ -30,27 +34,87 @@ function shop() {
           </svg>
         </div>
       </div>
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">
-            Action
-          </a>
-          <a class="dropdown-item" href="#">
-            Another action
-          </a>
-          <a class="dropdown-item" href="#">
-            Something else here
-          </a>
+      <div className="shops-content">
+        <div className="dropdown row">
+          <Dropdown className="col m-3">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Sort By
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                style={{ marginLeft: "10px" }}
+              />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <Dropdown className="col m-3">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Categories
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                style={{ marginLeft: "10px" }}
+              />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <Dropdown className="col m-3">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Price Range
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                style={{ marginLeft: "10px" }}
+              />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <Dropdown className="col m-3">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Color
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                style={{ marginLeft: "10px" }}
+              />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </div>
+      <div className="shops-cards row">
+        <div className="shops-cards-explore row">
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
+        </div>
+        <div className="shops-cards-explore row">
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
+        </div>
+        <div className="shops-cards-explore row">
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
+          <Card className="col-3" />
         </div>
       </div>
     </div>

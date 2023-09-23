@@ -41,3 +41,28 @@
 .shops .headerImg {
   width: 15%;
 }
+
+.shops .shops-content {
+  margin-left: 15vw;
+}
+
+.shops .dropdown {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.shops .dropdown .btn {
+  border: 1px solid var(--Grey-light);
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+}
+
+.shops .dropdown-toggle::after {
+  display: none;
+}
+
+.shops-cards-explore {
+  padding-left: 16vw;
+  padding-right: 16vw;
+}
