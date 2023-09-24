@@ -44,10 +44,7 @@ function Home({ routeVariants, products }) {
           <div className="main-carousel-content col my-auto" key={activeIndex}>
             <span className="col text-center">
               <h1>{itemheader[activeIndex]}</h1>
-              <Link
-                className="link d-flex justify-content-center"
-                to="/contact"
-              >
+              <Link className="link d-flex justify-content-center" to="/Shop">
                 <button className="btn btn-default btn-lg btn-block responsive-width">
                   <h5>Shop Now</h5>
                 </button>
@@ -121,8 +118,15 @@ function Home({ routeVariants, products }) {
             <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" />
             Explore Our Products
           </h1>
-          <div className="content-items-explore row justify-content-start">
+          <div className="content-items-explore">
             <Card items={products} maxItems="12" />
+          </div>
+          <div className="d-flex justify-content-center">
+            <Link to="/shop">
+              <button className="btn btn-primary text-center">
+                <h5>Explore More</h5>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

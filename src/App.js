@@ -12,9 +12,8 @@ import Shop from "./pages/shop/shop";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/cart/Cart";
-import { useEffect, useState } from "react";
-import prod from "./Assets/Images/products.png";
-import axios from "axios";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -55,19 +54,7 @@ const childVariants = {
 };
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://api.escuelajs.co/api/v1/products")
-      .then((response) => {
-        setProducts(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  var products = useSelector((state) => state.products);
 
   return (
     <Router>
@@ -85,10 +72,7 @@ function App() {
                 <Home routeVariants={routeVariants} products={products} />
               }
             />
-            <Route
-              path="/shop"
-              element={<Shop products={products} setCartItems={setProducts} />}
-            />
+            <Route path="/shop" element={<Shop products={products} />} />
             <Route path="/cart" element={<Cart />} />
             <Route
               path="/about"

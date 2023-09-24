@@ -1,51 +1,24 @@
 import React, { useState } from "react";
 import "./cart.css";
-import prod from "../../Assets/Images/products.png";
+import store from "../../StoreAPI";
+
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([
-    {
-      img: prod,
-      id: 1,
-      name: "Wireless PS Handler",
-      price: 124.0,
-      quantity: 1,
-    },
-    {
-      img: prod,
-      id: 2,
-      name: "Gradient Light Keyboard",
-      price: 124.0,
-      quantity: 1,
-    },
-    {
-      img: prod,
-      id: 3,
-      name: "HD CC Camera",
-      price: 124.0,
-      quantity: 1,
-    },
-  ]);
+  const [cartItems, setCartItems] = useState(store.getState().cartItems);
 
   const handleQuantityChange = (event, item) => {
     // Update the quantity of the item in the cart state
-    const updatedCartItems = cartItems.map((cartItem) => {
-      if (cartItem.id === item.id) {
-        return {
-          ...cartItem,
-          quantity: Math.max(event.target.value, 1), // Prevent negative number input
-        };
-      }
-      return cartItem;
-    });
-    setCartItems(updatedCartItems);
+    if (event.target.value > item.quantity) {
+      store.dispatch({ type: "INCREASE_QUANTITY", payload: { id: item.id } });
+    } else if (event.target.value < item.quantity) {
+      store.dispatch({ type: "DECREASE_QUANTITY", payload: { id: item.id } });
+    }
+    setCartItems(store.getState().cartItems);
   };
 
   const handleRemoveItem = (item) => {
     // Remove the item from the cart state
-    const updatedCartItems = cartItems.filter(
-      (cartItem) => cartItem.id !== item.id
-    );
-    setCartItems(updatedCartItems);
+    store.dispatch({ type: "REMOVE_FROM_CART", payload: { id: item.id } });
+    setCartItems(store.getState().cartItems);
   };
 
   // Calculate the final total of all items in the cart
@@ -71,9 +44,9 @@ const Cart = () => {
           {cartItems.map((item) => (
             <tr key={item.id}>
               <td>
-                <img src={item.img} alt="product" />
+                <img src={item.images[0]} alt="product" />
               </td>
-              <td>{item.name}</td>
+              <td>{item.title}</td>
               <td>
                 <input
                   type="number"

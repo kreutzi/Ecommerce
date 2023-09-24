@@ -1,17 +1,12 @@
 import "./card.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import store from "../../StoreAPI";
 
-function CardComponent({ item, cartItems, setCartItems }) {
+function CardComponent({ item }) {
   const handleAddToCart = () => {
     console.log(item.id); // log the id of the item
-    const itemIndex = cartItems.findIndex(
-      (cartItem) => cartItem.id === item.id
-    );
-    if (itemIndex === -1) {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
+    store.dispatch({ type: "ADD_TO_CART", payload: { ...item, quantity: 1 } });
   };
 
   return (
@@ -31,7 +26,6 @@ function CardComponent({ item, cartItems, setCartItems }) {
 }
 
 function CardList({ items, maxItems }) {
-  const [cartItems, setCartItems] = useState([]);
   const max = items.length;
   const maxToMap = maxItems ? Math.min(maxItems, max) : max;
 
@@ -39,12 +33,7 @@ function CardList({ items, maxItems }) {
     <div className="container-fuild">
       <div className="row">
         {items.slice(0, maxToMap).map((item) => (
-          <CardComponent
-            key={item.id}
-            item={item}
-            cartItems={cartItems}
-            setCartItems={setCartItems}
-          />
+          <CardComponent key={item.id} item={item} />
         ))}
       </div>
     </div>
