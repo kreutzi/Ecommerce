@@ -1,16 +1,17 @@
 import Carousel from "../../components/carousel/carousel";
+import Objective from "../../components/About&contact/Objective";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import Card from "../../components/card/card";
-import "./home.css";
 import { Link } from "react-router-dom";
 
 import laptop from "../../Assets/Images/laptop.png";
 import pc from "../../Assets/Images/Pc.png";
 import accesories from "../../Assets/Images/accessories.png";
 import monitor from "../../Assets/Images/monitor.png";
+import "./home.css";
 
 function Home({ routeVariants }) {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
@@ -135,6 +136,9 @@ function Home({ routeVariants }) {
             <Card className="col-2" />
           </div>
         </div>
+      </div>
+      <div className="home-ob">
+        <Objective />
       </div>
     </motion.div>
   );
