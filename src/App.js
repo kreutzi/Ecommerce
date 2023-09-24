@@ -12,8 +12,8 @@ import Shop from "./pages/shop/shop";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/cart/Cart";
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import prod from "./Assets/Images/products.png";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -53,6 +53,29 @@ const childVariants = {
 };
 
 function App() {
+  const [cartItems, setCartItems] = useState([
+    {
+      img: prod,
+      id: 1,
+      name: "Wireless PS Handler",
+      price: 124.0,
+      quantity: 1,
+    },
+    {
+      img: prod,
+      id: 2,
+      name: "Gradient Light Keyboard",
+      price: 124.0,
+      quantity: 1,
+    },
+    {
+      img: prod,
+      id: 3,
+      name: "HD CC Camera",
+      price: 124.0,
+      quantity: 1,
+    },
+  ]);
   return (
     <Router>
       <ScrollToTop />
@@ -63,8 +86,22 @@ function App() {
             <Navbar />
           </div>
           <Routes>
-            <Route path="/" element={<Home routeVariants={routeVariants} />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  routeVariants={routeVariants}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              }
+            />
+            <Route
+              path="/shop"
+              element={
+                <Shop cartItems={cartItems} setCartItems={setCartItems} />
+              }
+            />
             <Route path="/cart" element={<Cart />} />
             <Route
               path="/about"

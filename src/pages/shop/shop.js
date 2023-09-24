@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "../shop/shop.css";
 import Card from "../../components/card/card";
-function shop() {
+function shop({ cartItems, setCartItems }) {
   return (
     <div className="shops">
       <div className="row seperate"></div>
@@ -99,22 +99,7 @@ function shop() {
       </div>
       <div className="shops-cards row">
         <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-        </div>
-        <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-        </div>
-        <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
+          <Card cartItems={cartItems} setCartItems={setCartItems} />
         </div>
       </div>
     </div>

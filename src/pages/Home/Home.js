@@ -13,7 +13,7 @@ import accesories from "../../Assets/Images/accessories.png";
 import monitor from "../../Assets/Images/monitor.png";
 import "./home.css";
 
-function Home({ routeVariants }) {
+function Home({ routeVariants, cartItems, setCartItems }) {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -122,18 +122,7 @@ function Home({ routeVariants }) {
             Explore Our Products
           </h1>
           <div className="content-items-explore row justify-content-start">
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
+            <Card cartItems={cartItems} setCartItems={setCartItems} />
           </div>
         </div>
       </div>
