@@ -32,7 +32,7 @@ const Cart = () => {
       if (cartItem.id === item.id) {
         return {
           ...cartItem,
-          quantity: event.target.value,
+          quantity: Math.max(event.target.value, 1), // Prevent negative number input
         };
       }
       return cartItem;
@@ -78,6 +78,7 @@ const Cart = () => {
                 <input
                   type="number"
                   value={item.quantity}
+                  min={1} // Prevent negative number input
                   onChange={(event) => handleQuantityChange(event, item)}
                 />
               </td>
