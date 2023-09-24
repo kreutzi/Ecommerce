@@ -48,6 +48,12 @@ const Cart = () => {
     setCartItems(updatedCartItems);
   };
 
+  // Calculate the final total of all items in the cart
+  const total = cartItems.reduce(
+    (total, item) => total + item.quantity * item.price,
+    0
+  );
+
   return (
     <div className="cart">
       <table className="table">
@@ -85,7 +91,7 @@ const Cart = () => {
         </tbody>
       </table>
       <div className="cart-actions">
-        <button>Update Cart</button>
+        <p> Total: {total}</p>
         <button>Proceed to Checkout</button>
       </div>
     </div>
