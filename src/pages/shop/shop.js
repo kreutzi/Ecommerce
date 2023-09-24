@@ -12,10 +12,10 @@ function shop() {
                 <Link to="/">Home</Link>
               </li>
               <li>|</li>
-              <li className="active">Contact</li>
+              <li className="active">Shop</li>
             </ul>
           </div>
-          <h1>Contact With Us</h1>
+          <h1>Explore All Products</h1>
         </div>
         <div className="headerImg">
           <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +28,29 @@ function shop() {
               d="M33.176 98.168c17.498-18.159 46.593-38.403 73.704-30.926 6.307 1.78 10.783 5.442 13.683 9.817l-25.637-51.73c-3.662-5.85-13.021-4.629-18.311-.153L8.862 81.942c-6.155 5.29-6.51 14.7-.814 20.397 5.036 5.036 13.022 5.493 18.566 1.017z"
             />
           </svg>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">
+            Action
+          </a>
+          <a class="dropdown-item" href="#">
+            Another action
+          </a>
+          <a class="dropdown-item" href="#">
+            Something else here
+          </a>
         </div>
       </div>
     </div>
