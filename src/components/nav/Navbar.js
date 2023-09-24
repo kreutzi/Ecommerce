@@ -21,7 +21,7 @@ function Navbar() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="list-group-item">
-              <a href="#">Shop</a>
+              <NavLink to="/shop">Shop</NavLink>
             </li>
             <li className="list-group-item">
               <NavLink to="/about">About</NavLink>
@@ -39,9 +39,9 @@ function Navbar() {
               </a>
             </li>
             <li className="list-group-item">
-              <a href="#">
+              <NavLink to="/cart">
                 <FontAwesomeIcon icon={faShoppingCart} />
-              </a>
+              </NavLink>
             </li>
             <li className="list-group-item">
               <a href="#">

@@ -1,3 +1,7 @@
+::selection {
+  background: var(--Purple);
+  color: #fff;
+}
 :root {
   --Blue: #3577f0;
   --Purple: #8c71db;
@@ -138,9 +142,32 @@
   display: flex;
   flex-direction: column;
 }
-.about .team h6 {
+.about .team-intro h6 {
   color: var(--Purple);
   padding-bottom: 6px;
+}
+.about .team-intro h2 {
+  padding-bottom: 50px;
+}
+.about .teams {
+  display: flex;
+  justify-content: space-between;
+}
+.about .person-img {
+  width: 80%;
+  margin-bottom: 30px;
+  transition: 0.3s ease-in-out;
+}
+.about .person-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+.about .person h6 {
+  color: var(--Grey-dark);
+  font-weight: 400;
+}
+.about .person-img:hover {
+  transform: scale(1.1);
 }
 
 .about .feature {

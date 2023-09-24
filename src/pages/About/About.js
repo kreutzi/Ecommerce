@@ -7,6 +7,10 @@ import cards3 from "../../Assets/Images/cards_logo3.png";
 import feature1 from "../../Assets/Images/features1.jpg";
 import feature3 from "../../Assets/Images/features3.jpg";
 import Objective from "../../components/About&contact/Objective";
+import Ziyad from "..//../Assets/Images/Ziyad.jpg";
+import Baher from "..//../Assets/Images/Baher.jpg";
+import Yehia from "..//../Assets/Images/Yehia1.jpg";
+import Magdy from "..//../Assets/Images/Magdy.jpg";
 import { motion } from "framer-motion";
 
 // import { useState } from "react";
@@ -102,8 +106,40 @@ function About({ routeVariants, childVariants }) {
         </div>
       </div>
       <div className="team">
-        <h6>Our Team</h6>
-        <h2>Expart Management Team</h2>
+        <div className="team-intro">
+          <h6>Our Team</h6>
+          <h2>Expart Management Team</h2>
+        </div>
+        <div className="teams">
+          <div className="person">
+            <div className="person-img">
+              <img src={Ziyad} alt="" />
+            </div>
+            <h6>Founder</h6>
+            <h4>Ziyad Elnady</h4>
+          </div>
+          <div className="person">
+            <div className="person-img">
+              <img src={Baher} alt="" />
+            </div>
+            <h6>Founder</h6>
+            <h4>Bahar Salah</h4>
+          </div>
+          <div className="person">
+            <div className="person-img">
+              <img src={Yehia} alt="" />
+            </div>
+            <h6>Founder</h6>
+            <h4>Yehia Mosa</h4>
+          </div>
+          <div className="person">
+            <div className="person-img">
+              <img src={Magdy} alt="" />
+            </div>
+            <h6>Founder</h6>
+            <h4>Mohammed Magdy</h4>
+          </div>
+        </div>
       </div>
       <div className="feature">
         <div className="features">

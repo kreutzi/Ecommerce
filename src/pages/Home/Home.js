@@ -1,9 +1,16 @@
 import Carousel from "../../components/carousel/carousel";
+import Objective from "../../components/About&contact/Objective";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import Card from "../../components/card/card";
+import { Link } from "react-router-dom";
 
+import laptop from "../../Assets/Images/laptop.png";
+import pc from "../../Assets/Images/Pc.png";
+import accesories from "../../Assets/Images/accessories.png";
+import monitor from "../../Assets/Images/monitor.png";
 import "./home.css";
 
 function Home({ routeVariants }) {
@@ -31,38 +38,107 @@ function Home({ routeVariants }) {
       animate="final"
       className="home"
     >
-      <div className="main-navbar w-100"></div>
-      <div className="row seperate"></div>
+      <div className="seperate"></div>
       <div className="main-carousel row top-buffer carousel-bg">
-        <div className="main-carousel-content col my-5" key={activeIndex}>
-          <span className="col">
-            <h1>{itemheader[activeIndex]}</h1>
-            <p>this is a test</p>
-          </span>
-        </div>
-        <div className="col">
-          <Carousel />
+        <div className="row">
+          <div className="main-carousel-content col my-auto" key={activeIndex}>
+            <span className="col text-center">
+              <h1>{itemheader[activeIndex]}</h1>
+              <Link
+                className="link d-flex justify-content-center"
+                to="/contact"
+              >
+                <button className="btn btn-default btn-lg btn-block responsive-width">
+                  <h5>Shop Now</h5>
+                </button>
+              </Link>
+            </span>
+          </div>
+          <div className="col-md-6 ms-auto">
+            <Carousel />
+          </div>
         </div>
       </div>
-      <div className="content">
-        <div className="content-browse">
+      <div className="content row">
+        <div className="content-browse col">
           <h1 className="content-browse-title">
-            <FontAwesomeIcon icon={faTags} color="#ff497c" /> Browse By
-            Categories
+            <FontAwesomeIcon icon={faTags} color="#ff497c" />
+            Browse By Categories
           </h1>
-          <div className="content-browse-categories">
-            <h1>Cards</h1>
+
+          <div className="content-browse-categories col">
+            <div className="category">
+              <ul className="list-group list-group-horizontal d-flex justify-content-center">
+                <li className="list-group-item">
+                  <div className="category-item">
+                    <div className="category-img">
+                      <img src={laptop} alt="" />
+                    </div>
+                    <div className="category-txt">
+                      <h5>Laptop</h5>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="list-group-item">
+                  <div className="category-item">
+                    <div className="category-img">
+                      <img src={pc} alt="" />
+                    </div>
+                    <div className="category-txt">
+                      <h5>Computer</h5>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="list-group-item">
+                  <div className="category-item">
+                    <div className="category-img">
+                      <img src={monitor} alt="" />
+                    </div>
+                    <div className="category-txt">
+                      <h5>Monitor</h5>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="list-group-item">
+                  <div className="category-item">
+                    <div className="category-img">
+                      <img src={accesories} alt="" />
+                    </div>
+                    <div className="category-txt">
+                      <h5>Accesories</h5>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="content-items">
           <h1 className="content-items-title">
-            <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" /> Browse
-            By Categories
+            <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" />
+            Explore Our Products
           </h1>
-          <div className="content-items-explore">
-            <h1>Cards</h1>
+          <div className="content-items-explore row justify-content-start">
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
           </div>
         </div>
+      </div>
+      <div className="home-ob">
+        <Objective />
       </div>
     </motion.div>
   );
