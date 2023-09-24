@@ -14,6 +14,8 @@ import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/cart/Cart";
 import { useEffect, useState } from "react";
 import prod from "./Assets/Images/products.png";
+import axios from "axios";
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -53,29 +55,20 @@ const childVariants = {
 };
 
 function App() {
-  const [cartItems, setCartItems] = useState([
-    {
-      img: prod,
-      id: 1,
-      name: "Wireless PS Handler",
-      price: 124.0,
-      quantity: 1,
-    },
-    {
-      img: prod,
-      id: 2,
-      name: "Gradient Light Keyboard",
-      price: 124.0,
-      quantity: 1,
-    },
-    {
-      img: prod,
-      id: 3,
-      name: "HD CC Camera",
-      price: 124.0,
-      quantity: 1,
-    },
-  ]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://api.escuelajs.co/api/v1/products")
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -89,18 +82,12 @@ function App() {
             <Route
               path="/"
               element={
-                <Home
-                  routeVariants={routeVariants}
-                  cartItems={cartItems}
-                  setCartItems={setCartItems}
-                />
+                <Home routeVariants={routeVariants} products={products} />
               }
             />
             <Route
               path="/shop"
-              element={
-                <Shop cartItems={cartItems} setCartItems={setCartItems} />
-              }
+              element={<Shop products={products} setCartItems={setProducts} />}
             />
             <Route path="/cart" element={<Cart />} />
             <Route
