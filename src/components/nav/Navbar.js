@@ -41,6 +41,7 @@ function Navbar() {
             <li className="list-group-item">
               <a href="#">
                 <FontAwesomeIcon icon={faShoppingCart} />
+                <NavLink to="/shop"></NavLink>
               </a>
             </li>
             <li className="list-group-item">
