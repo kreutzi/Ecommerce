@@ -74,7 +74,7 @@ function Home({ routeVariants }) {
                       <img src={laptop} alt="" />
                     </div>
                     <div className="category-txt">
-                      <h5>laptop</h5>
+                      <h5>Laptop</h5>
                     </div>
                   </div>
                 </li>
