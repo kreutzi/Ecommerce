@@ -72,8 +72,20 @@ function App() {
                 <Home routeVariants={routeVariants} products={products} />
               }
             />
-            <Route path="/shop" element={<Shop products={products} />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/shop"
+              element={
+                <Shop
+                  products={products}
+                  routeVariants={routeVariants}
+                  childVariants={childVariants}
+                />
+              }
+            />
+            <Route
+              path="/cart"
+              element={<Cart routeVariants={routeVariants} />}
+            />
             <Route
               path="/about"
               element={

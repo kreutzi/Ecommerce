@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 import "./cart.css";
 import store from "../../StoreAPI";
 
-const Cart = () => {
+const Cart = ({ routeVariants }) => {
   const [cartItems, setCartItems] = useState(store.getState().cartItems);
 
   const handleQuantityChange = (event, item) => {
@@ -28,7 +30,12 @@ const Cart = () => {
   );
 
   return (
-    <div className="cart">
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      className="cart"
+    >
       <table className="table">
         <thead>
           <tr>
@@ -68,7 +75,7 @@ const Cart = () => {
         <p> Total: {total}</p>
         <button>Proceed to Checkout</button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
