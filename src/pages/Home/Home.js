@@ -42,7 +42,7 @@ function Home({ routeVariants }) {
                 className="link d-flex justify-content-center"
                 to="/contact"
               >
-                <button>
+                <button className="btn btn-default btn-lg btn-block responsive-width">
                   <h5>Shop Now</h5>
                 </button>
               </Link>
@@ -69,23 +69,19 @@ function Home({ routeVariants }) {
             <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" /> Browse
             By Categories
           </h1>
-          <div className="content-items-explore row justify-content-start ">
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
-          </div>
-          <div className="content-items-explore row justify-content-start ">
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
-          </div>
-          <div className="content-items-explore row justify-content-start ">
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
-            <Card className="col-3" />
+          <div className="content-items-explore row justify-content-start">
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
+            <Card className="col-2" />
           </div>
         </div>
       </div>
