@@ -156,17 +156,19 @@
 .about .person-img {
   width: 80%;
   margin-bottom: 30px;
-  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 6px;
 }
 .about .person-img img {
   width: 100%;
   border-radius: 6px;
+  transition: 0.3s ease-in-out;
 }
 .about .person h6 {
   color: var(--Grey-dark);
   font-weight: 400;
 }
-.about .person-img:hover {
+.about .person:hover .person-img img {
   transform: scale(1.1);
 }
 
