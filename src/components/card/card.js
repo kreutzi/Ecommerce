@@ -5,7 +5,7 @@ import store from "../../StoreAPI";
 
 function CardComponent({ item }) {
   const handleAddToCart = () => {
-    console.log(item.id); // log the id of the item
+    // console.log(item.id); // log the id of the item
     store.dispatch({ type: "ADD_TO_CART", payload: { ...item, quantity: 1 } });
   };
 
