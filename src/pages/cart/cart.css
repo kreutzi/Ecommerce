@@ -1,0 +1,21 @@
+.cart .seprate {
+  background-color: white;
+  padding-bottom: 150px;
+}
+.header_of_the_shop {
+  display: flex;
+  justify-content: space-around;
+}
+.clear_shop a {
+  text-decoration: none;
+}
+.clear_shop a:hover {
+  color: black;
+}
+.cart-update-btn-area {
+  display: flex;
+  justify-content: space-around;
+}
+.update-btn {
+  display: flex;
+}
