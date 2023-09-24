@@ -50,10 +50,10 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div className="seprate"></div>
       <table className="table">
         <thead>
           <tr>
+            <th></th>
             <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>

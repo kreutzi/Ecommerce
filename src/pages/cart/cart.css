@@ -1,13 +1,13 @@
-.cart .seprate {
-  background-color: white;
-  padding-bottom: 150px;
-}
 .cart {
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: fit-content;
   padding: 1rem;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.5vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 10rem;
 }
 
 .cart .table {
@@ -17,9 +17,10 @@
 
 .cart .table th,
 .cart .table td {
-  padding: 0.5rem;
+  padding: 2vw;
   text-align: left;
   border-bottom: 1px solid #ccc;
+  vertical-align: middle; /* added */
 }
 
 .cart .table th {
@@ -27,8 +28,8 @@
 }
 
 .cart .table td img {
-  width: 50px;
-  height: 50px;
+  width: 9vw;
+  height: 9vw;
   object-fit: cover;
 }
 
