@@ -1,21 +1,75 @@
-.cart .seprate {
-  background-color: white;
-  padding-bottom: 150px;
+.cart {
+  margin: 2rem auto;
+  max-width: fit-content;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.5vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 10rem;
 }
-.header_of_the_shop {
+
+.cart .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart .table th,
+.cart .table td {
+  padding: 2vw;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  vertical-align: middle; /* added */
+}
+
+.cart .table th {
+  font-weight: bold;
+}
+
+.cart .table td img {
+  width: 9vw;
+  height: 9vw;
+  object-fit: cover;
+}
+
+.cart .table td input[type="number"] {
+  width: 50px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cart .cart-actions {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
-.clear_shop a {
-  text-decoration: none;
-}
-.clear_shop a:hover {
+
+.cart .table button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: whitesmoke;
   color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.cart-update-btn-area {
-  display: flex;
-  justify-content: space-around;
+
+.cart .table button:hover {
+  background-color: #0069d9;
 }
-.update-btn {
-  display: flex;
+
+.cart .cart-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart .cart-actions button:hover {
+  background-color: #0069d9;
 }

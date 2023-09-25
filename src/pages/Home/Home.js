@@ -13,7 +13,7 @@ import accesories from "../../Assets/Images/accessories.png";
 import monitor from "../../Assets/Images/monitor.png";
 import "./home.css";
 
-function Home({ routeVariants }) {
+function Home({ routeVariants, products }) {
   const itemheader = ["Roco WireLess Headphone", "Smart Digital Watch"];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -44,10 +44,7 @@ function Home({ routeVariants }) {
           <div className="main-carousel-content col my-auto" key={activeIndex}>
             <span className="col text-center">
               <h1>{itemheader[activeIndex]}</h1>
-              <Link
-                className="link d-flex justify-content-center"
-                to="/contact"
-              >
+              <Link className="link d-flex justify-content-center" to="/Shop">
                 <button className="btn btn-default btn-lg btn-block responsive-width">
                   <h5>Shop Now</h5>
                 </button>
@@ -121,19 +118,15 @@ function Home({ routeVariants }) {
             <FontAwesomeIcon icon={faBasketShopping} color="#ff497c" />
             Explore Our Products
           </h1>
-          <div className="content-items-explore row justify-content-start">
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
-            <Card className="col-2" />
+          <div className="content-items-explore">
+            <Card items={products} maxItems="12" />
+          </div>
+          <div className="d-flex justify-content-center">
+            <Link to="/shop">
+              <button className="btn btn-primary text-center">
+                <h5>Explore More</h5>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

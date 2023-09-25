@@ -11,6 +11,7 @@
 .card-comp {
   min-width: fit-content;
   max-width: fit-content;
+  margin-bottom: 5vh; /* Add margin bottom to each card */
 }
 
 .card-comp .bt {
@@ -22,4 +23,18 @@
 .card-comp:hover .bt {
   visibility: visible;
   opacity: 1;
+}
+
+.card-comp .card-img-top {
+  border-radius: 10px;
+}
+
+.card-comp .card {
+  border-radius: 10px;
+}
+
+.card-comp .card-comp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

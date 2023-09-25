@@ -2,11 +2,17 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import "../shop/shop.css";
 import Card from "../../components/card/card";
-function shop() {
+function shop({ products, routeVariants, childVariants }) {
   return (
-    <div className="shops">
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      className="shops"
+    >
       <div className="row seperate"></div>
       <div className="header">
         <div className="header-txt">
@@ -97,27 +103,17 @@ function shop() {
           </Dropdown>
         </div>
       </div>
-      <div className="shops-cards row">
+      <motion.div
+        variants={childVariants}
+        initial="initial"
+        animate="final"
+        className="shops-cards row"
+      >
         <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
+          <Card items={products} />
         </div>
-        <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-        </div>
-        <div className="shops-cards-explore row">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

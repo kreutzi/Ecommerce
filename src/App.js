@@ -13,6 +13,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/cart/Cart";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,6 +54,8 @@ const childVariants = {
 };
 
 function App() {
+  var products = useSelector((state) => state.products);
+
   return (
     <Router>
       <ScrollToTop />
@@ -63,9 +66,26 @@ function App() {
             <Navbar />
           </div>
           <Routes>
-            <Route path="/" element={<Home routeVariants={routeVariants} />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/"
+              element={
+                <Home routeVariants={routeVariants} products={products} />
+              }
+            />
+            <Route
+              path="/shop"
+              element={
+                <Shop
+                  products={products}
+                  routeVariants={routeVariants}
+                  childVariants={childVariants}
+                />
+              }
+            />
+            <Route
+              path="/cart"
+              element={<Cart routeVariants={routeVariants} />}
+            />
             <Route
               path="/about"
               element={
