@@ -13,6 +13,21 @@
 .navbar a {
   display: block;
   text-decoration: none;
+  padding: 8px;
+  border-radius: 10px;
   color: black;
   font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+.navbar a.active {
+  color: #fff;
+  background: #000;
+}
+
+.navbar .h:hover a {
+  transform: scale(1.05) translateZ(0);
+}
+.navbar .ha:hover > .h:not(:hover) a {
+  /* transform: scale(0.97) translateY(-3%); */
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(2px);
 }

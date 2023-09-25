@@ -16,17 +16,17 @@ function Navbar() {
           <h1>Logo</h1>
         </div>
         <div className="col">
-          <ul className="list-group list-group-horizontal d-flex justify-content-center">
-            <li className="list-group-item">
+          <ul className="list-group list-group-horizontal d-flex justify-content-center ha">
+            <li className="list-group-item h">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item h">
               <NavLink to="/shop">Shop</NavLink>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item h">
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item h">
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
