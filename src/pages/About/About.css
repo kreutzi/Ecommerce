@@ -152,6 +152,7 @@
 .about .teams {
   display: flex;
   justify-content: space-between;
+  cursor: default;
 }
 .about .person-img {
   width: 80%;
