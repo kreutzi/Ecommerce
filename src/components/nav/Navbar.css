@@ -28,6 +28,5 @@
   transform: scale(1.05) translateZ(0);
 }
 .navbar .ha:hover > .h:not(:hover) a {
-  /* transform: scale(0.97) translateY(-3%); */
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(2px);
 }
