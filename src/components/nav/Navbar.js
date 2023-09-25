@@ -13,7 +13,7 @@ function Navbar() {
     <div className="container text-center bg-white rounded-4 py-2 fs-5">
       <div className="navbar row justify-content-md-center">
         <div className="col col-lg-2">
-          <h1>Logo</h1>
+          <h1 className="cool-txt">BmyZ</h1>
         </div>
         <div className="col">
           <ul className="list-group list-group-horizontal d-flex justify-content-center ha">

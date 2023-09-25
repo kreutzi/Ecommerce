@@ -30,3 +30,6 @@
 .navbar .ha:hover > .h:not(:hover) a {
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(2px);
 }
+.cool-txt {
+  text-shadow: -3px 0 0 rgba(255, 0, 0, 0.7), 3px 0 0 rgba(0, 255, 255, 0.7);
+}
