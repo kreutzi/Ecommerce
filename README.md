@@ -1,6 +1,8 @@
 
 # React Ecommerce Project For Telecom Egypt Internship 2023
 
+![Ecommerce](https://github.com/kreutzi/Ecommerce/assets/88722623/ca6d83f0-a01b-4006-a4e7-3363775a4a20)
+
 ## Tech Stack
 ### Application and Data
 <img src="https://github.com/kreutzi/Ecommerce/assets/88722623/b2f90ea6-3123-47a1-be9f-0ff5ed3bae79" width=10% height=10%> 
